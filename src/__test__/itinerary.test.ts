@@ -1,4 +1,4 @@
-import { POST } from "@/app/api/route";
+import { POST } from "../app/api/route";
 
 
 it('should return data with status 200', async () => {

@@ -29,10 +29,10 @@ export async function POST(req: Request) {
             sortedItinerary,
             { status: 200 }
         );
-    } catch (error: any) {
+    } catch (error) {
         console.log(error);
         return NextResponse.json(
-            { message: error?.message },
+            { message: (error as Error).message },
             { status: 400 }
         );
     }

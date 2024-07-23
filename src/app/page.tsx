@@ -7,7 +7,7 @@ export default function Home() {
   const [itinerary, setItinerary] = useState([])
   const [input, setInput] = useState("")
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     try {
       const res = await axios.post("/api", {
@@ -34,7 +34,7 @@ export default function Home() {
           Submit
         </button>
         <button
-          onClick={(e) => {
+          onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
             e.preventDefault()
             setItinerary([])
             setInput("")
